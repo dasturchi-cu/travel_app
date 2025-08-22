@@ -14,14 +14,18 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SplashCubit, SplashState>(
-      builder: ( context, state) {
-        state.when(loading: () =>AppScaffold(
-          child: Center(child: SvgPicture.asset(AppImages.logo),),)
-            , onborading: ()=> SizedBox()
-            , auth: ()=>SizedBox()
-            , main: ()=>SizedBox(),
+      builder: (context, state) {
+        return state.when(
+          loading: () => AppScaffold(
+            child: Center(
+              child: SvgPicture.asset(AppImages.logo),
+            ),
+          ),
+          onborading: () => const SizedBox(),
+          auth: () => const SizedBox(),
+          main: () => const SizedBox(),
         );
-      }a
+      },
     );
   }
 }
