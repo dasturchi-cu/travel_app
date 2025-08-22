@@ -21,7 +21,7 @@ class SplashPage extends StatelessWidget {
             , auth: ()=>SizedBox()
             , main: ()=>SizedBox(),
         );
-      }
+      }a
     );
   }
 }
